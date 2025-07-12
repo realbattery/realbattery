@@ -95,22 +95,26 @@
             color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            width: 100%;
+            overflow-x: hidden;
         }
 
+        /* Full width container */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            width: 100%;
+            max-width: none;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Header */
+        /* Header - full width */
         header {
             background: rgba(255, 255, 255, 0.95);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            padding: 10px 0;
+            width: 100%;
         }
 
         .header-content {
@@ -118,6 +122,8 @@
             justify-content: space-between;
             align-items: center;
             position: relative;
+            padding: 10px 40px;
+            width: 100%;
         }
 
         .logo {
@@ -200,21 +206,22 @@
             color: #ff6b35;
         }
 
-        /* Hero Section */
+        /* Hero Section - full width */
         .hero {
             background: linear-gradient(135deg, rgba(255,107,53,0.9), rgba(52,73,94,0.9));
             color: white;
-            padding: 60px 0;
+            padding: 60px 40px;
             text-align: center;
+            width: 100%;
         }
 
         .hero h2 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 25px;
         }
 
@@ -222,11 +229,11 @@
             display: inline-block;
             background: linear-gradient(45deg, #ff6b35, #f7931e);
             color: white;
-            padding: 12px 25px;
+            padding: 15px 30px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
         }
 
@@ -235,30 +242,31 @@
             box-shadow: 0 10px 20px rgba(255,107,53,0.4);
         }
 
-        /* Brands Section */
+        /* Brands Section - full width */
         .brands {
-            padding: 50px 0;
+            padding: 60px 40px;
             background: rgba(255,255,255,0.95);
+            width: 100%;
         }
 
         .brands h2 {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
             color: #2c3e50;
         }
 
         .brand-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 30px;
             margin-bottom: 40px;
         }
 
         .brand-card {
             background: white;
             border-radius: 10px;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
@@ -270,47 +278,102 @@
         }
 
         .brand-logo {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(45deg, #ff6b35, #f7931e);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 15px;
+            margin: 0 auto 20px;
             color: white;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
 
         .brand-card h3 {
             color: #2c3e50;
-            margin-bottom: 8px;
-            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
         }
 
         .brand-card p {
             color: #7f8c8d;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
         }
 
-        /* Products Section */
+        .brand-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            padding: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .brand-card:hover .brand-logo {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .brand-card:hover .brand-logo img {
+            transform: scale(1.05);
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .brand-logo {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .brand-logo {
+                width: 90px;
+                height: 90px;
+                padding: 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .brand-logo {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* Products Section - full width */
         .products {
-            padding: 60px 0;
+            padding: 70px 40px;
             background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+            width: 100%;
         }
 
         .products h2 {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
             color: white;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
 
         .product-card {
@@ -327,44 +390,53 @@
         }
 
         .product-image {
-            height: 180px;
+            height: 200px;
             background: linear-gradient(45deg, #667eea, #764ba2);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: bold;
         }
 
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Keeps aspect ratio */
+            object-position: center;
+            transition: transform 0.3s ease;
+            padding: 15px; /* Adds space around image */
+        }
+
         .product-info {
-            padding: 20px;
+            padding: 25px;
         }
 
         .product-info h3 {
             color: #2c3e50;
-            margin-bottom: 12px;
-            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
         }
 
         .product-info p {
             color: #7f8c8d;
-            margin-bottom: 15px;
-            line-height: 1.5;
-            font-size: 0.9rem;
+            margin-bottom: 18px;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .product-features {
             list-style: none;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .product-features li {
             color: #555;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             position: relative;
-            padding-left: 20px;
-            font-size: 0.85rem;
+            padding-left: 25px;
+            font-size: 0.9rem;
         }
 
         .product-features li:before {
@@ -379,13 +451,13 @@
             background: linear-gradient(45deg, #ff6b35, #f7931e);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 25px;
             border-radius: 50px;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
             width: 100%;
-            font-size: 0.9rem;
+            font-size: 1rem;
         }
 
         .book-now-btn:hover {
@@ -393,30 +465,31 @@
             transform: translateY(-2px);
         }
 
-        /* Footer */
+        /* Footer - full width */
         footer {
             background: rgba(44, 62, 80, 0.95);
             color: white;
-            padding: 50px 0 20px;
+            padding: 60px 40px 20px;
+            width: 100%;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .footer-section h3 {
             color: #ff6b35;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
         }
 
         .footer-section p, .footer-section li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             opacity: 0.9;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
         .footer-section ul {
@@ -424,28 +497,28 @@
         }
 
         .footer-section ul li {
-            padding: 4px 0;
-            font-size: 0.85rem;
+            padding: 6px 0;
+            font-size: 0.9rem;
         }
 
         .footer-bottom {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
             opacity: 0.8;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
         }
 
         /* WhatsApp Button */
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background: #25D366;
             color: white;
             border-radius: 50px;
-            padding: 12px 15px;
-            font-size: 0.9rem;
+            padding: 15px 20px;
+            font-size: 1rem;
             font-weight: bold;
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
@@ -453,7 +526,7 @@
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 8px;
         }
 
         .whatsapp-float:hover {
@@ -462,8 +535,8 @@
 
         /* Footer Link Styles */
         .clickable-item {
-            margin-bottom: 8px;
-            padding: 5px 0;
+            margin-bottom: 10px;
+            padding: 6px 0;
         }
         
         .footer-link {
@@ -471,10 +544,10 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             transition: all 0.3s ease;
-            padding: 5px 10px;
-            border-radius: 4px;
+            padding: 8px 12px;
+            border-radius: 6px;
             background: rgba(255,255,255,0.1);
         }
         
@@ -485,7 +558,7 @@
         }
         
         .footer-link .icon {
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
         
         .footer-link .text {
@@ -499,8 +572,8 @@
         /* Powered By Section */
         .powered-by {
             text-align: center;
-            margin-top: 20px;
-            font-size: 0.8rem;
+            margin-top: 25px;
+            font-size: 0.85rem;
             color: rgba(255,255,255,0.6);
         }
         .powered-by a {
@@ -514,10 +587,43 @@
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .header-content {
+                padding: 10px 30px;
+            }
+            
+            .hero {
+                padding: 50px 30px;
+            }
+            
+            .brands {
+                padding: 50px 30px;
+            }
+            
+            .products {
+                padding: 60px 30px;
+            }
+            
+            .footer {
+                padding: 50px 30px 20px;
+            }
+            
+            .brand-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: row;
                 align-items: center;
+                padding: 10px 20px;
             }
 
             .logo {
@@ -554,64 +660,76 @@
             }
 
             .hero {
-                padding: 40px 0;
+                padding: 40px 20px;
             }
 
             .hero h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .hero p {
                 font-size: 1rem;
             }
 
+            .brands {
+                padding: 40px 20px;
+            }
+
+            .products {
+                padding: 50px 20px;
+            }
+
+            .footer {
+                padding: 40px 20px 20px;
+            }
+
             .brands h2, .products h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
                 margin-bottom: 30px;
             }
 
             .brand-grid {
-                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-                gap: 15px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
             }
 
             .brand-card {
-                padding: 15px;
+                padding: 20px;
             }
 
             .brand-logo {
-                width: 50px;
-                height: 50px;
-                font-size: 1rem;
+                width: 60px;
+                height: 60px;
+                font-size: 1.2rem;
             }
 
             .brand-card h3 {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             .product-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .product-image {
                 height: 150px;
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
 
             .footer-content {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
                 gap: 25px;
             }
         }
 
         @media (max-width: 480px) {
             .logo-img {
-                width: 130px;
-                height: 50px;
+                width: 200px;
             }
 
             .hero h2 {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
 
             .hero p {
@@ -619,19 +737,25 @@
             }
 
             .cta-button {
-                padding: 10px 20px;
-                font-size: 0.9rem;
+                padding: 12px 25px;
+                font-size: 1rem;
             }
 
             .brand-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .whatsapp-float {
-                padding: 10px 15px;
-                font-size: 0.8rem;
-                bottom: 15px;
-                right: 15px;
+                padding: 12px 18px;
+                font-size: 0.9rem;
+                bottom: 20px;
+                right: 20px;
             }
         }
     </style>
@@ -674,41 +798,52 @@
             <h2>Premium Brands We Offer</h2>
             <div class="brand-grid">
                 <div class="brand-card">
-                    <div class="brand-logo">EX</div>
+                    <div class="brand-logo">
+                        <img src="images/exide.png" alt="Exide Battery Logo" loading="lazy">
+                    </div>
                     <h3>Exide</h3>
                     <p>India's leading battery manufacturer with over 70 years of excellence</p>
                 </div>
                 <div class="brand-card">
-                    <div class="brand-logo">AM</div>
+                    <div class="brand-logo">
+                        <img src="images/amaron.jpeg" alt="Amaron Battery Logo" loading="lazy">
+                    </div>
                     <h3>Amaron</h3>
                     <p>Advanced battery technology for superior performance and reliability</p>
                 </div>
                 <div class="brand-card">
-                    <div class="brand-logo">LU</div>
+                    <div class="brand-logo">
+                        <img src="images/luminous.jpg" alt="Luminous Battery Logo" loading="lazy">
+                    </div>
                     <h3>Luminous</h3>
                     <p>Power backup solutions for homes and businesses across India</p>
                 </div>
                 <div class="brand-card">
-                    <div class="brand-logo">SF</div>
+                    <div class="brand-logo">
+                        <img src="images/sf-sonic.png" alt="SF Sonic Battery Logo" loading="lazy">
+                    </div>
                     <h3>SF Sonic</h3>
                     <p>Cutting-edge battery technology with Japanese innovation</p>
                 </div>
                 <div class="brand-card">
-                    <div class="brand-logo">MT</div>
+                    <div class="brand-logo">
+                        <img src="images/microtek.png" alt="Microtek Battery Logo" loading="lazy">
+                    </div>
                     <h3>Microtek</h3>
                     <p>Reliable inverter and UPS batteries for uninterrupted power</p>
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Products Section -->
     <section class="products" id="products">
         <div class="container">
             <h2>Our Battery Collection</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <div class="product-image">🚗</div>
+                    <div class="product-image">
+                        <img src="images/car.jpg" alt="Car Battery" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>Car Batteries</h3>
                         <p>High-performance automotive batteries for all car models with guaranteed reliability and long-lasting power.</p>
@@ -723,7 +858,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">🏠</div>
+                    <div class="product-image">
+                        <img src="images/home.jpg" alt="Car Battery" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>Inverter Batteries</h3>
                         <p>Deep cycle batteries perfect for home inverters, providing consistent backup power during outages.</p>
@@ -738,7 +875,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">🏢</div>
+                    <div class="product-image">
+                        <img src="images/ups.jpeg" alt="Car Battery" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>UPS Batteries</h3>
                         <p>Sealed maintenance-free batteries designed for UPS systems, computers, and office equipment.</p>
@@ -753,7 +892,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">🏍️</div>
+                    <div class="product-image">
+                        <img src="images/bike.jpg" alt="Car Battery" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>Bike Batteries</h3>
                         <p>Compact and powerful batteries for motorcycles and scooters with superior starting power.</p>
@@ -768,7 +909,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">🔋</div>
+                    <div class="product-image">
+                        <img src="images/solar.jpg" alt="Car Battery" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>Solar Batteries</h3>
                         <p>Deep cycle batteries optimized for solar power systems with extended cycle life.</p>
@@ -783,7 +926,9 @@
                 </div>
 
                 <div class="product-card">
-                    <div class="product-image">🚛</div>
+                    <div class="product-image">
+                        <img src="images/truck.jpeg" alt="Car Battery" loading="lazy">
+                    </div>
                     <div class="product-info">
                         <h3>Commercial Batteries</h3>
                         <p>Heavy-duty batteries for trucks, buses, and commercial vehicles with robust construction.</p>
