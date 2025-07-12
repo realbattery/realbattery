@@ -15,14 +15,16 @@
     <meta property="og:url" content="https://realbattery.karur.xchip.in/">
     <meta property="og:title" content="Real Battery - Premium Battery Solutions in Karur">
     <meta property="og:description" content="Karur's trusted battery dealer for Exide, Amaron, Luminous, SF Sonic & Microtek batteries with warranty. Call 095241 89367">
-    <meta property="og:image" content="https://realbattery.karur.xchip.in/images/real-battery-social-preview.jpg">
+    <meta property="og:image" content="https://realbattery.karur.xchip.in/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://realbattery.karur.xchip.in/">
     <meta property="twitter:title" content="Real Battery - Premium Battery Solutions in Karur">
     <meta property="twitter:description" content="Karur's trusted battery dealer for Exide, Amaron, Luminous, SF Sonic & Microtek batteries with warranty. Call 095241 89367">
-    <meta property="twitter:image" content="https://realbattery.karur.xchip.in/images/real-battery-social-preview.jpg">
+    <meta property="twitter:image" content="https://realbattery.karur.xchip.in/logo.png">
     
     <!-- Canonical URL -->
     <link rel="canonical" href="https://realbattery.karur.xchip.in/">
@@ -46,7 +48,7 @@
       "@context": "https://schema.org",
       "@type": "AutoPartsStore",
       "name": "Real Battery",
-      "image": "https://realbattery.karur.xchip.in/logo.svg",
+      "image": "https://realbattery.karur.xchip.in/logo.png",
       "@id": "https://realbattery.karur.xchip.in",
       "url": "https://realbattery.karur.xchip.in",
       "email": "realbattery.karur@xchip.in",
@@ -124,9 +126,9 @@
             gap: 10px;
         }
 
-        .logo-svg {
-            width: 150px;
-            height: 60px;
+        .logo-img {
+            width: 300px;
+            height: auto;
         }
 
         .contact-info {
@@ -176,7 +178,6 @@
             background: #e74c3c;
             color: white;
         }
-
 
         .contact-btn:hover {
             opacity: 0.9;
@@ -459,6 +460,59 @@
             transform: scale(1.1);
         }
 
+        /* Footer Link Styles */
+        .clickable-item {
+            margin-bottom: 8px;
+            padding: 5px 0;
+        }
+        
+        .footer-link {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .footer-link:hover {
+            background: rgba(255,255,255,0.2);
+            text-decoration: none;
+            transform: translateX(5px);
+        }
+        
+        .footer-link .icon {
+            font-size: 1.1em;
+        }
+        
+        .footer-link .text {
+            border-bottom: 1px dashed rgba(255,255,255,0.5);
+        }
+        
+        .footer-link:hover .text {
+            border-bottom-color: #ff6b35;
+        }
+
+        /* Powered By Section */
+        .powered-by {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+        }
+        .powered-by a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .powered-by a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .header-content {
@@ -551,9 +605,9 @@
         }
 
         @media (max-width: 480px) {
-            .logo-svg {
-                width: 120px;
-                height: 50px;
+            .logo-img {
+                width: 150px;
+                height: 60px;
             }
 
             .hero h2 {
@@ -580,23 +634,6 @@
                 right: 15px;
             }
         }
-
-        /* Added style for the powered by section */
-        .powered-by {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 0.8rem;
-            color: rgba(255,255,255,0.6);
-        }
-        .powered-by a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .powered-by a:hover {
-            color: #fff;
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
@@ -605,14 +642,8 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                  <img src="logo.svg" alt="Real Battery Logo" class="logo-img" />
+                    <img src="site-logo.svg" alt="Real Battery Logo" class="logo-img" />
                 </div>
-                <style>
-                  .logo-img {
-                    width: 200px; /* Set appropriate width */
-                    height: auto; /* Maintain aspect ratio */
-                  }
-                </style>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
                 <div class="contact-info" id="contactInfo">
                     <h3>📞 095241 89367</h3>
@@ -768,104 +799,69 @@
             </div>
         </div>
     </section>
-    <footer>
-            <div class="container">
-                <div class="footer-content">
-                   <div class="footer-section">
-                        <h3>Our Brands</h3>
-                        <ul>
-                            <li>Exide Batteries</li>
-                            <li>Amaron Batteries</li>
-                            <li>Luminous Batteries</li>
-                            <li>SF Sonic Batteries</li>
-                            <li>Microtek Batteries</li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Services</h3>
-                        <ul>
-                            <li>Battery Installation</li>
-                            <li>Battery Replacement</li>
-                            <li>Free Home Delivery</li>
-                            <li>Battery Testing</li>
-                            <li>Warranty Support</li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Business Hours</h3>
-                        <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
-                        <p>Sunday: 10:00 AM - 6:00 PM</p>
-                        <p><strong>Emergency Service Available</strong></p>
-                        <p>Call us anytime for urgent battery needs!</p>
-                    </div>
-<div class="footer-section">
-    <h3>Real Battery</h3>
-    <p>Your trusted partner for all battery needs in Karur. We provide premium quality batteries with excellent after-sales service.</p>
-    <p class="clickable-item">
-        <a href="tel:+919524189367" class="footer-link">
-            <span class="icon">📞</span> <span class="text">095241 89367</span>
-        </a>
-    </p>
-    <p class="clickable-item">
-        <a href="mailto:realbattery.karur@xchip.in" class="footer-link">
-            <span class="icon">✉️</span> <span class="text">realbattery.karur@xchip.in</span>
-        </a>
-    </p>
-    <p class="clickable-item">
-        <a href="https://maps.app.goo.gl/pznrp3bGpyZtp7Fs8" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           class="footer-link">
-            <span class="icon">📍</span> <span class="text">22/12, Muthurajapuram, Jawahar Bazaar, Karur, Tamil Nadu 639001</span>
-        </a>
-    </p>
-</div>
 
-<style>
-    .clickable-item {
-        margin-bottom: 8px;
-        padding: 5px 0;
-    }
-    
-    .footer-link {
-        color: white;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.3s ease;
-        padding: 5px 10px;
-        border-radius: 4px;
-        background: rgba(255,255,255,0.1);
-    }
-    
-    .footer-link:hover {
-        background: rgba(255,255,255,0.2);
-        text-decoration: none;
-        transform: translateX(5px);
-    }
-    
-    .footer-link .icon {
-        font-size: 1.1em;
-    }
-    
-    .footer-link .text {
-        border-bottom: 1px dashed rgba(255,255,255,0.5);
-    }
-    
-    .footer-link:hover .text {
-        border-bottom-color: #ff6b35;
-    }
-</style>                    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Our Brands</h3>
+                    <ul>
+                        <li>Exide Batteries</li>
+                        <li>Amaron Batteries</li>
+                        <li>Luminous Batteries</li>
+                        <li>SF Sonic Batteries</li>
+                        <li>Microtek Batteries</li>
+                    </ul>
                 </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2025 Real Battery. All rights reserved. | Premium Battery Solutions in Karur</p>
-                    <div class="powered-by">
-                        Powered by <a href="https://xchip.in" target="_blank" rel="noopener">xchip.in</a> - Digital Marketing Solutions
-                    </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Battery Installation</li>
+                        <li>Battery Replacement</li>
+                        <li>Free Home Delivery</li>
+                        <li>Battery Testing</li>
+                        <li>Warranty Support</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Business Hours</h3>
+                    <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
+                    <p>Sunday: 10:00 AM - 6:00 PM</p>
+                    <p><strong>Emergency Service Available</strong></p>
+                    <p>Call us anytime for urgent battery needs!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Real Battery</h3>
+                    <p>Your trusted partner for all battery needs in Karur. We provide premium quality batteries with excellent after-sales service.</p>
+                    <p class="clickable-item">
+                        <a href="tel:+919524189367" class="footer-link">
+                            <span class="icon">📞</span> <span class="text">095241 89367</span>
+                        </a>
+                    </p>
+                    <p class="clickable-item">
+                        <a href="mailto:realbattery.karur@xchip.in" class="footer-link">
+                            <span class="icon">✉️</span> <span class="text">realbattery.karur@xchip.in</span>
+                        </a>
+                    </p>
+                    <p class="clickable-item">
+                        <a href="https://maps.app.goo.gl/pznrp3bGpyZtp7Fs8" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="footer-link">
+                            <span class="icon">📍</span> <span class="text">22/12, Muthurajapuram, Jawahar Bazaar, Karur, Tamil Nadu 639001</span>
+                        </a>
+                    </p>
                 </div>
             </div>
-        </footer>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Real Battery. All rights reserved. | Premium Battery Solutions in Karur</p>
+                <div class="powered-by">
+                    Powered by <a href="https://xchip.in" target="_blank" rel="noopener">xchip.in</a> - Digital Marketing Solutions
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/919524189367?text=Hi%20Real%20Battery!%20I%20need%20help%20with%20battery%20selection." class="whatsapp-float">
